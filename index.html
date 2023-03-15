@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>turse n travels</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="D:\study matirial\bootstrap\bootstrap-4.6.1-dist\bootstrap-4.6.1-dist\css\bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="/index.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&display=swap');
+#navbar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    background-color: rgb(152, 155, 155);
+    padding-top: 30px;
+  padding-bottom: 18px;
+  }
+
+  #navbar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  #navbar ul li {
+    list-style: none;
+    font-size: 2rem;
+  }
+
+  #navbar ul li a {
+    background-color: none;
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: "Baloo Bhai 2", cursive;
+  }
+  
+  #navbar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  #navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  #navbar-toggle {
+    display: none;
+  }
+
+.wrapper {
+    transform: translate(-50%, -50%);
+    gap: 40px;
+    position: absolute;
+    width: 68vw;
+    top: 50%;
+    left: 50%;
+    display: flex;
+}
+
+.container {
+    box-shadow: 0 0 7px ;
+    height: 28vmin;
+    width: 30vmin;
+    text-align: center;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1em 0;
+    border-bottom: 7px solid red;
+    border-bottom-left-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.container:hover {
+    box-shadow: 0 0 10px;
+    transform: translateY(-8px);
+    transition: 0.3s all ease-in-out;
+
+}
+
+.num {
+    color: orange;
+    font-weight: bolder;
+    display: grid;
+    font-size: 40px;
+    font-family: 'baloo bhai 2';
+    transition: 1s all ease-in-out;
+}
+
+.text {
+    color: #45f3ff;
+    font-weight: 700;
+    font-family: 'baloo bhai 2';
+    font-size: 35px;
+    top: 60px;
+    text-transform: capitalize;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 4s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+.hidden h1{
+    font-family:  'Bree Serif', serif;
+    color: orange;
+    top: 0;
+    bottom: 0;
+}
+.contents{
+    margin: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.service-detail{
+    margin: 25px 40px 25px 40px;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+   
+}
+.service-detail b{
+    text-decoration: none;
+    font-family:  sans-serif;
+    font-size: 25px;
+    color: rgb(210, 161, 69);
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+section {
+    min-height: 100vh;
+    display: grid;
+    color: white;
+    font-size: 25px;
+
+}
+
+main {
+    background-color: rgb(55, 52, 52);
+    /* border: 2px solid black; */
+    margin-top: 20px; 
+    /* border-radius: 7px; */
+    /* margin: 40px; */
+    left: 0;
+    /* opacity: 0; */
+    box-sizing: border-box;
+
+}
+/*********************************************************************footer********************************************************************************/
+footer{
+    background-color: #09080a;
+    color: white;
+    width: 100%;
+    
+}
+.pheraps{
+    display: flex;
+    gap: 30px;
+    margin: 30px 10px 30px 10px;
+     justify-content: space-between;
+}
+.pheraps p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+.pheraps h3{
+    font-family: 'baloo bhai 2';
+    font-size: 1.8rem;
+    color: #45f3ff;
+}
+.about{
+    width: 65%  ;
+}
+.links{
+    display: block;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.links a:hover{
+    color: orange;
+}
+
+.contact a{
+    font-size: 1.1rem;
+   color:rgb(210, 149, 37);
+}
+
+.contact a:hover{
+    color:rgb(222, 75, 48);
+}
+.container-fluid{
+  padding-bottom: 10px;
+border: 2px solid black;
+}
+span a{
+    color: orange;
+}
+span a:hover{
+    color: orange;
+}
+/* *************************************************media queries************************************************************* */
+@media screen and (max-width: 1441px) {
+    body {
+        margin-bottom: auto;
+    }
+
+    .wrapper {
+        width: 80vw;
+        gap: 40px;
+    }
+
+    .container {
+        height: 25vmin;
+        width: 26vmin;
+    }
+
+    .num {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        margin-bottom: auto;
+    }
+
+    .wrapper {
+        width: 78vw;
+        gap: 30px;
+    }
+
+    .container {
+        height: 25vmin;
+        width: 26vmin;
+    }
+
+    .num {
+        font-size: 26px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-bottom: auto;
+    }
+
+    .wrapper {
+        width: 73vw;
+        flex-wrap: wrap;
+        gap: 33px;
+
+    }
+
+    .container {
+        width: calc(50% - 40px);
+        height: 19vmin;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    #navbar ul li {
+        font-size: 1.5rem;
+    }
+
+    #navbar ul {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        margin-bottom: auto;
+    }
+
+    .wrapper {
+        width: 72vw;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+
+    .container {
+        height: 27vmin;
+        width: calc(50% - 40px);
+        height: 22vmin;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    #navbar ul li {
+        font-size: 1.5rem;
+    }
+
+    #navbar ul {
+        display: grid;
+    }
+
+    #navbar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar-toggle {
+        display: block;
+        border-radius: 7px;
+        margin-left: 310px;
+    }
+
+
+    #navbar-div {
+        display: none;
+    }
+    .pheraps{
+        display: block;
+        margin-left: 5px;
+        padding-left: 25px;
+    }
+    .about{
+        width: 90%;
+    }
+    .contact{
+      padding-top:20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    body {
+        margin-bottom: auto;
+    }
+
+    .wrapper {
+        width: 85vw;
+        flex-wrap: wrap;
+        gap: 18px;
+
+    }
+
+    .container {
+        /* height: 26vmin; */
+        width: calc(50% - 40px);
+        font-size: 30px;
+        height: 33vmin;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper {
+        width: 80vw;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 2.5em 0;
+
+    }
+
+    .container {
+        width: calc(50% - 40px);
+        font-size: 20px;
+        height: 30vmin;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .wrapper {
+        width: 85vw;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 2.5em 0;
+
+    }
+
+    .container {
+        width: calc(50% - 40px);
+        font-size: 13px;
+        height: 18vmin;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+}
+
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <button id="navbar-toggle">
+      <img src="img/navigation-bar.png" alt="" height="20px" width="20px" />
+    </button>
+    <div id="navbar-div">
+      <ul>
+        <li class="item"><a href="turse_n_travels.html">home</a></li>
+        <li class="item"><a href="tourse_page.html">tourse</a></li>
+        <li class="item"><a href="booking.html">Booking</a></li>
+        <li class="item"><a href="inqury_page.html">contact us</a></li>
+      </ul>             
+    </div>
+  </nav>
+  <main>
+    <section class="hidden" id="hidden">
+      <div class="contents">
+      </div>
+    </section>
+    <hr />
+    <section class="hidden">
+      <h1 class="text-center mt-5">why our tourse ?</h1>
+      <div class="wrapper">
+        <div class="container">
+          <span class="num" data-val="2158">000</span>
+          <span class="text">visitores</span>
+        </div>
+
+        <div class="container">
+          <span class="num" data-val="2128">000</span>
+          <span class="text">clients</span>
+        </div>
+
+        <div class="container">
+          <span class="num" data-val="2099">000</span>
+          <span class="text">tourse</span>
+        </div>
+
+        <div class="container">
+          <span class="num" data-val="2125">000</span>
+          <span class="text">tourist</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-fluid">
+      <div class="pheraps">
+        <div class="about">
+          <h3>About us</h3>
+          <p>
+            At our Tour and Travel website, we are committed to providing you with the best travel experience possible.
+            Our team of experienced travel experts is dedicated to making your journey seamless, comfortable, and
+            enjoyable. So, whether you are planning a romantic getaway, family vacation, or solo adventure, we have got
+            you covered.
+          </p>
+        </div>
+        <div class="links">
+          <h3>Usefull links</h3>
+          <a href="turse_n_travels.html">home</a><br>
+          <a href="tourse_page.html">tourse</a><br>
+          <a href="booking.html">Booking</a><br>
+          <a href="/inqury_page.html">contact us</a>
+        </div>
+        <div class="contact">
+          <h3>Contact us</h3>
+          <p>
+            Call us: <br>
+            9054396057
+          </p>
+          <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100068935792940" target="_blank"><i
+                class="fab fa-facebook-square"></i>
+              Facebook</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/" target="_blank"><i class="fab fa-instagram"></i>
+              Instagram</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/" target="_blank"><i
+                class="fab fa-twitter"></i>Twitter</a><br />
+
+            <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Linked
+              in</a>
+          </div>
+        </div>
+      </div>
+      <span>&copy;Copyright All Rights are reserved by
+        <a href="">Kaushik Bhikadiya</a> the founder of krishna tourse n
+        travels</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+    let valuedisplays = document.querySelectorAll(".num");
+    let interval = 3000;
+
+    valuedisplays.forEach((valuedisplays) => {
+      let startvalue = 0;
+
+      let endvalue = parseInt(valuedisplays.getAttribute("data-val"));
+      let test = Math.round(10.222);
+      console.log(test);
+
+      let duration = Math.floor(interval / endvalue);
+
+      let counter = setInterval(() => {
+        startvalue += 1;
+        valuedisplays.textContent = startvalue;
+
+        if (startvalue == endvalue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+
+    let hiddenElement = document.querySelectorAll(".hidden");
+
+    console.log("hello dear user");
+    let obsever = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+
+    hiddenElement.forEach((val) => obsever.observe(val));
+
+    $(document).ready(function () {
+      $("#navbar-toggle").click(function () {
+        var div = $("#navbar-div");
+
+        div.animate({ height: "toggle" }, "slow");
+      });
+
+      $.ajax({
+        type: "GET",
+        url: "data.xml",
+        dataType: "xml",
+        success: function (xml) {
+          console.log("xml");
+          $(xml).find("book").each(() => {
+              var li1= $(this).find("tag").text();;
+              var li2 = $(this).find("li2").text();
+              var li3 = $(this).find("li3").text();
+              var li4 = $(this).find("li4").text();
+              var li5 = $(this).find("li5").text();
+              $(".contents").append(`
+              <p>Welcome to our Tour and Travel website, where you can explore the most fascinating destinations across the
+          globe. We offer a range of travel options to suit your interests, budget, and preferences. Here is a brief
+          overview of our services:</p>
+
+        <p class="service-detail"><b>Tour Packages:</b> Our tour packages are designed to take you to the best
+          destinations around the world, whether you want to experience the culture, history, wildlife, or natural
+          beauty of a place. We offer customized packages for solo travelers, couples, families, and groups.</p>
+
+        <p class="service-detail"><b> Flights: </b>We provide flight bookings to any destination worldwide, with
+          competitive pricing and top-notch service. Our team of travel experts can help you find the best flight deals
+          and provide you with personalized recommendations.</p>
+
+        <p class="service-detail"> <b>Hotels:</b> We offer a wide range of hotels, from budget-friendly options to
+          luxury resorts. Our team ensures that you get the best rates, convenient locations, and high-quality service
+          during your stay.</p>
+
+        <p class="service-detail"> <b>Activities: </b> We offer a variety of activities to suit all interests, whether
+          you want to go on a safari, hike in the mountains, or explore a new city. Our team can help you plan and book
+          your activities, ensuring that you have an unforgettable experience.</p>
+
+        <p class="service-detail"> <b> Transportation:</b> We provide transportation services, including car rentals and
+          airport transfers, to make your travel experience hassle-free and convenient.</p>
+
+        <p class="service-detail"> <b>Travel Insurance:</b> We offer travel insurance to ensure that you are covered in
+          case of any unforeseen circumstances during your trip.</p>
+        <p> At our Tour and Travel website, we are committed to providing you with the best travel experience possible.
+          Our team of experienced travel experts is dedicated to making your journey seamless, comfortable, and
+          enjoyable. So, whether you are planning a romantic getaway, family vacation, or solo adventure, we have got
+          you covered.</p>
+                     `);
+            });
+        },
+      });
+    });
+  </script>
+</body>
+</html>

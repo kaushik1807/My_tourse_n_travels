@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inquiry page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <style>
+    /* *******************************************************************navbar****************************************************************************** */
+    @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&display=swap");
+body{
+  background-color: #e0e0e0;
+}
+    #navbar {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      flex-direction: column;
+      background-color: rgb(152, 155, 155);
+      padding-top: 30px;
+      padding-bottom: 18px;
+    }
+
+    #navbar ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    #navbar ul li {
+      list-style: none;
+      font-size: 2rem;
+    }
+
+    #navbar ul li a {
+      background-color: none;
+      text-transform: capitalize;
+      color: black;
+      display: block;
+      padding: 3px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-family: "Baloo Bhai 2", cursive;
+    }
+
+    #navbar::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    #navbar ul li a:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+
+    #navbar-toggle {
+      display: none;
+    }
+
+    .addclss {
+      border: 1.5px solid red;
+      color: red;
+    }
+
+    .lblclss {
+      color: red;
+      transform: scale(1.1);
+      transition: 1s all ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+    }
+
+    .form-control {
+      background-color: #e8f0fe;
+    }
+
+    .viewbtn {
+      color: red;
+      background-color: #fff;
+      border: 1.5px solid black;
+    }
+
+    .container {
+      margin-top: 80px;
+      width: 600px;
+      padding: 40px;
+      border: 1px solid black;
+      border-radius: 7px;
+      background-color: #fff;
+    }
+
+    /* ********************************************************************footer*********************************************************************** */
+    footer{
+    background-color: #09080a;
+    color: white;
+    width: 100%;
+    margin-top: 80px;
+}
+.pheraps{
+    display: flex;
+    gap: 30px;
+    margin: 30px 10px 30px 10px;
+     justify-content: space-between;
+}
+.pheraps p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+.pheraps h3{
+    font-family: 'baloo bhai 2';
+    font-size: 1.8rem;
+    color: #45f3ff;
+}
+.about{
+    width: 65%  ;
+}
+.links{
+    display: block;
+}
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.links a:hover{
+    color: orange;
+}
+
+.contact a{
+    font-size: 1.1rem;
+   color:rgb(210, 149, 37);
+}
+
+.contact a:hover{
+    color:rgb(222, 75, 48);
+}
+.container-fluid{
+  padding-bottom: 10px;
+border: 2px solid black;
+}
+span a{
+    color: orange;
+}
+span a:hover{
+    color: orange;
+}
+
+    @media screen and (max-width: 650px) {
+      .mcontainer {
+        height: 500px;
+      }
+
+      h1 {
+        margin-top: 110px;
+      }
+
+      #navbar-toggle {
+        display: block;
+        border-radius: 7px;
+      }
+
+      #navbar-div {
+        display: none;
+      }
+
+      #navbar ul li {
+        font-size: 1.5rem;
+      }
+
+      #navbar ul {
+        display: grid;
+      }
+
+      #navbar {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 400px;
+      }
+      .pheraps{
+        display: block;
+        margin-left: 5px;
+        padding-left: 25px;
+    }
+    .about{
+        width: 90%;
+    }
+    .contact{
+      padding-top:20px;
+    }
+    }
+
+    @media screen and (max-width: 500px) {
+      .mcontainer {
+        height: 450px;
+      }
+
+      .container {
+        width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <button id="navbar-toggle">
+      <img src="img/navigation-bar.png" alt="" height="20px" width="20px" />
+    </button>
+    <div id="navbar-div">
+      <ul>
+        <li class="item"><a href="turse_n_travels.html">home</a></li>
+        <li class="item"><a href="tourse_page.html">tourse</a></li>
+        <li class="item"><a href="booking.html">Booking</a></li>
+        <li class="item"><a href="inqury_page.html">contact us</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+  <div class="container">
+    <div class="mb-3">
+      <label for="" class="lblname">Name</label>
+      <input type="text" class="form-control" placeholder="enter name" id="name" required />
+    </div>
+    <div class="mb-3">
+      <label for="" class="lblemail">Email</label>
+      <input type="email" class="form-control" placeholder="enter email" id="email" required />
+    </div>
+    <div class="mb-3">
+      <label for="" class="lblphone">Phone no</label>
+      <input type="text" class="form-control" placeholder="enter phone no" id="phone" required />
+    </div>
+    <div class="mb-3">
+      <label for="">Enter Message</label><br />
+      <textarea name="" id="" class="form-control" placeholder="enter your message" cols="30" rows="2"></textarea>
+    </div>
+    <div class="btnlist">
+      <button type="submit" class="btn btn-primary btn-md" id="btn" onclick="btnfun()">
+        Submit
+      </button>
+      <button type="reset" class="btn btn-warning">Reset</button>
+
+    </div>
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="pheraps">
+        <div class="about">
+          <h3>About us</h3>
+          <p>
+            At our Tour and Travel website, we are committed to providing you with the best travel experience possible. Our team of experienced travel experts is dedicated to making your journey seamless, comfortable, and enjoyable. So, whether you are planning a romantic getaway, family vacation, or solo adventure, we have got you covered.
+          </p>
+        </div>
+           <div class="links">
+            <h3>Usefull links</h3>
+            <a href="turse_n_travels.html">home</a><br>
+            <a href="tourse_page.html">tourse</a><br>
+            <a href="booking.html">Booking</a><br>
+            <a href="inqury_page.html">contact us</a>
+           </div>
+        <div class="contact">
+          <h3>Contact us</h3>
+          <p>
+            Call us: <br>
+            9054396057
+          </p>
+          <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100068935792940" target="_blank"><i class="fab fa-facebook-square"></i>
+              Facebook</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/"target="_blank"><i class="fab fa-twitter"></i>Twitter</a><br />
+            <a href="https://www.linkedin.com/feed/"target="_blank"><i class="fa-brands fa-linkedin-in"></i> Linked in</a>
+          </div>
+        </div>
+      </div>
+      <span>&copy;Copyright All Rights are reserved by
+        <a href="">Kaushik Bhikadiya</a> the founder of krishna tourse n
+        travels</span>
+    </div>
+  </footer>
+
+
+  <script src="
+    <script
+      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script>
+    let uname = document.getElementById("name");
+    let emails = document.getElementById("email");
+    let phone = document.getElementById("phone");
+    let regex =
+      /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    let regexname = /^([a-zA-Z ]){2,30}$/;
+    let regxphoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+    $(document).ready(function () {
+      $("#name").change((e) => {
+        uname = e.target.value;
+        if (!regexname.test(uname)) {
+          $("#name").addClass("addclss");
+          $(".lblname").addClass("lblclss");
+        } else {
+          $("#name").removeClass("addclss");
+          $(".lblname").removeClass("lblclss");
+        }
+      });
+      $("#phone").change((e) => {
+        phone = e.target.value;
+        if (!regxphoneno.test(phone)) {
+          $("#phone").addClass("addclss");
+          $(".lblphone").addClass("lblclss");
+        } else {
+          $("#phone").removeClass("addclss");
+          $(".lblphone").removeClass("lblclss");
+        }
+      });
+      $("#email").change(function (e) {
+        emails = e.target.value;
+        if (!regex.test(emails)) {
+          $("#email").addClass("addclss");
+          $(".lblemail").addClass("lblclss");
+        } else {
+          $("#email").removeClass("addclss");
+          $(".lblemail").removeClass("lblclss");
+        }
+      });
+    });
+
+    function btnfun() {
+      if (
+        $("#name").hasClass("addclss") &&
+        $("#phone").removeClass("addclss") &&
+        $("#email").addClass("addclss")
+      ) {
+        $("#btn").addClass("viewbtn");
+        alert("please fill the details properly");
+      } else {
+        alert("Thank you for the hon'ble response");
+        $("#btn").removeClass("viewbtn");
+      }
+    }
+    $(document).ready(function () {
+      $("#navbar-toggle").click(function () {
+        var div = $("#navbar-div");
+
+        div.animate({ height: "toggle" }, "slow");
+      });
+    });
+  </script>
+</body>
+
+</html>

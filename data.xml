@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<book>
+         <tag>Welcome to our Tour and Travel website, where you can explore the most fascinating destinations across the
+          globe. We offer a range of travel options to suit your interests, budget, and preferences. Here is a brief
+          overview of our services:</tag>
+
+        <p class="service-detail"><b>Tour Packages:</b> Our tour packages are designed to take you to the best
+          destinations around the world, whether you want to experience the culture, history, wildlife, or natural
+          beauty of a place. We offer customized packages for solo travelers, couples, families, and groups.</p>
+
+        <p class="service-detail"><b> Flights: </b>We provide flight bookings to any destination worldwide, with
+          competitive pricing and top-notch service. Our team of travel experts can help you find the best flight deals
+          and provide you with personalized recommendations.</p>
+
+        <p class="service-detail"> <b>Hotels:</b> We offer a wide range of hotels, from budget-friendly options to
+          luxury resorts. Our team ensures that you get the best rates, convenient locations, and high-quality service
+          during your stay.</p>
+
+        <p class="service-detail"> <b>Activities: </b> We offer a variety of activities to suit all interests, whether
+          you want to go on a safari, hike in the mountains, or explore a new city. Our team can help you plan and book
+          your activities, ensuring that you have an unforgettable experience.</p>
+
+        <p class="service-detail"> <b> Transportation:</b> We provide transportation services, including car rentals and
+          airport transfers, to make your travel experience hassle-free and convenient.</p>
+
+        <p class="service-detail"> <b>Travel Insurance:</b> We offer travel insurance to ensure that you are covered in
+          case of any unforeseen circumstances during your trip.</p>
+        <p> At our Tour and Travel website, we are committed to providing you with the best travel experience possible.
+          Our team of experienced travel experts is dedicated to making your journey seamless, comfortable, and
+          enjoyable. So, whether you are planning a romantic getaway, family vacation, or solo adventure, we have got
+          you covered.</p>
+</book>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tourse you love much</title>
+  <!-- <link rel="stylesheet" href="/tourse_page.css" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&display=swap');
+
+/* *********************************************************************navbar************************************************************************ */
+#navbar {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    background-color: rgb(152, 155, 155);
+    padding-top: 30px;
+    padding-bottom: 18px;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+#navbar ul li a {
+    background-color: none;
+    color: black;
+    text-transform: capitalize;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", cursive;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+#navbar-toggle {
+    display: none;
+}
+
+/* ******************************************************************* welcome section *********************************************************************/
+.h1-div {
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 820px;
+    margin-left: 180px;
+    background-color: #e0e0e0;
+}
+
+.div-main {
+    height: 100%;
+    width: 100%;
+    max-height: 270px;
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px;
+}
+
+.div-main:hover img {
+    transform: scale(1.2);
+    transition: 1s all ease-in-out;
+    overflow: hidden;
+}
+
+.div-main:hover .overley {
+    color: rgb(233, 208, 69) ;
+    font-weight: bolder;
+    transition: 1s all ease-in-out;
+    opacity: 0.4;
+}
+
+.overley {
+    height: 110%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0.418);
+    transition: 0.5s all ease-in-out;
+    position: absolute;
+  
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+/*********************************************************************** main-section ********************************************************************/
+#tourses-main-section {
+    height: 850px;
+    width: 100%;
+}
+
+#tourses-main-section-2 {
+    width: 100%;
+    height: 600px;
+    background-image: url(/img/full-shot-travel-concept-with-landmarks.jpg);
+    background-attachment: fixed;
+    margin-top: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tourses-main-section-content {
+    background-color: #e0e0e0;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px;
+    background-color: #e0e0e0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transition: 0.5s all ease-in-out;
+    box-shadow: 0 0 15px;
+}
+
+.img_container {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    position: relative;
+}
+
+.img_container:hover .overleys {
+    transition: 1s all ease-in-out;
+    opacity: 0.4;
+    color: black;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.details {
+    padding: 15px;
+}
+
+/* ***********************************************footer************************************************************************************** */
+footer {
+    background-color: #09080a;
+    color: white;
+    width: 100%;
+}
+
+.pheraps {
+    display: flex;
+    gap: 30px;
+    margin: 30px 10px 30px 10px;
+    justify-content: space-between;
+}
+
+.pheraps p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.pheraps h3 {
+    font-family: 'baloo bhai 2';
+    font-size: 1.8rem;
+    color: #45f3ff;
+}
+
+.about {
+    width: 65%;
+}
+
+.links {
+    display: block;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.links a:hover {
+    color: orange;
+}
+
+.contact a {
+    font-size: 1.1rem;
+    color: rgb(210, 149, 37);
+}
+
+.contact a:hover {
+    color: rgb(222, 75, 48);
+}
+
+.container-fluid {
+    padding-bottom: 10px;
+    border: 2px solid black;
+}
+
+span a {
+    color: orange;
+}
+
+span a:hover {
+    color: orange;
+}
+
+/*********************************************************************** media queries **************************************************************************/
+
+@media (min-width:1250px) {
+    .div-main {
+        max-width: 250px;
+        max-height: 210px;
+        height: 100%;
+        width: 100%;
+        margin: 40px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    .h1-div h1 {
+        font-size: 50px;
+    }
+    #tourses-main-section {
+        height: 1000px;
+    }
+    #tourses-main-section-2 {
+        height: 790px;
+        width: 100%;
+    }
+}
+
+@media (max-width:1250px) and (min-width:1080px) {
+    .div-main {
+        max-width: 250px;
+        max-height: 210px;
+        height: 100%;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+    .h1-div h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width:1080px) and (min-width:880px) {
+    .div-main {
+        max-width: 230px;
+        max-height: 190px;
+        height: 100%;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        gap: 30px;
+        margin-left: 40px;
+    }
+
+    .h1-div h1 {
+        font-size: 35px;
+    }
+
+    #tourses-main-section {
+        height: 800px;
+    }
+
+    #tourses-main-section-2 {
+        height: 590px;
+    }
+}
+
+@media (max-width:880px) and (min-width:700px) {
+    .div-main {
+        max-width: 300px;
+        max-height: 200px;
+        height: 100%;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 20px;
+    }
+
+    .h1-div h1 {
+        font-size: 30px;
+    }
+
+    #tourses-main-section {
+        height: 600px;
+    }
+
+    #tourses-main-section-2 {
+        height: 500px;
+    }
+
+
+}
+
+@media (max-width:700px) and (min-width:500px) {
+    .div-main {
+        max-width: 300px;
+        max-height: 200px;
+        height: 100%;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 20px
+    }
+
+    .container {
+        gap: 30px;
+        /* flex-wrap: wrap; */
+        grid-template-columns: 1fr 1fr;
+        margin-left: 20px;
+        /* margin: 40px; */
+    }
+
+    .h1-div h1 {
+        font-size: 30px;
+    }
+
+    #tourses-main-section {
+        height: 500px;
+    }
+
+    #tourses-main-section-2 {
+        height: 400px;
+    }
+
+    #navbar-toggle {
+        display: block;
+        border-radius: 7px;
+
+    }
+
+    #navbar-div {
+        display: none;
+    }
+
+    #navbar ul li {
+        font-size: 1.5rem;
+    }
+
+    #navbar ul {
+        display: grid;
+    }
+
+    #navbar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar-toggle img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .pheraps {
+        display: block;
+        margin-left: 5px;
+        padding-left: 25px;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .contact {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width:500px) and (min-width:280px) {
+    .div-main {
+        max-width: 300px;
+        max-height: 200px;
+        height: 100%;
+        width: 100%;
+        left: 50px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        gap: 30px;
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+    }
+
+    .h1-div h1 {
+        font-size: 30px;
+    }
+
+    #tourses-main-section {
+        height: 370px;
+    }
+
+    #tourses-main-section-2 {
+        height: 300px;
+    }
+
+    #navbar-toggle {
+        display: block;
+        border-radius: 7px;
+
+    }
+
+    #navbar-div {
+        display: none;
+    }
+
+    #navbar ul li {
+        font-size: 1.5rem;
+    }
+
+    #navbar ul {
+        display: grid;
+    }
+
+    #navbar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar-toggle img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .pheraps {
+        display: block;
+        margin-left: 5px;
+        padding-left: 25px;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .contact {
+        padding-top: 20px;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <nav id="navbar">
+    <button id="navbar-toggle">
+      <img src="img/navigation-bar.png" alt="" height="20px" width="20px" />
+    </button>
+    <div id="navbar-div">
+      <ul>
+        <li class="item"><a href="turse_n_travels.html">home</a></li>
+        <li class="item"><a href="tourse_page.html">tourse</a></li>
+        <li class="item"><a href="booking.html">Booking</a></li>
+        <li class="item"><a href="inqury_page.html">contact us</a></li> 
+      </ul>
+    </div>
+  </nav>
+  <div class="h1-div">
+
+  </div>
+  <section id="tourses-main-section">
+    <img src="img/travel-concept-with-worldwide-landmarks.jpg" alt="" />
+    <!-- <div class="back-img"></div> -->
+  </section>
+  <div class="container">
+    <div class="div-main">
+      <img src="img/Couple_peace_honeymoon.jpg" alt="" />
+      <div class="overley">
+        <h3>Honeymoon</h3>
+      </div>
+    </div>
+
+    <div class="div-main">
+      <img src="img/gurudwara_piligram.jpg" alt="" />
+      <div class="overley">
+        <h3>Piligrams</h3>
+      </div>
+    </div>
+
+    <div class="div-main">
+      <img src="img/woman-traveler_adventure.jpg" alt="" />
+      <div class="overley">
+        <h3>Adventure</h3>
+      </div>
+    </div>
+
+    <div class="div-main">
+      <img src="img/sikkims.jpg" alt="" />
+      <div class="overley">
+        <h3>cold-places</h3>
+      </div>
+    </div>
+
+    <div class="div-main">
+      <img src="img/honeymoon-packages.jpg" alt="" />
+      <div class="overley">
+        <h3>coule-places</h3>
+      </div>
+    </div>
+
+    <div class="div-main">
+      <img src="img/best_couple.jpg" alt="" />
+      <div class="overley">
+        <h3>Beaches</h3>
+      </div>
+    </div>
+  </div>
+
+  <section id="tourses-main-section-2"></section>
+
+  <section id="tourses-main-section-content">
+    <div class="container" >
+      <div class="card" >
+        <div class="img_container">
+          <img src="img/gova.jpg" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>shimala tourse</h2>
+          <hr />
+          <p>INR 55,000 per couple</p>
+          <p>(7 days & 6 Nights)</p>
+          <p>touse code:SH-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Shimla"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/kashmir.webp" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Kashmir tourse</h2>
+          <hr />
+          <p>INR 90,000 per couple</p>
+          <p>(5 days & 6 Nights)</p>
+          <p>touse code:KM-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Kashmir"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/Rajasthan.jpg" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Rajasthan tourse</h2>
+          <hr />
+          <p>INR 37,000 per couple</p>
+          <p>(4 days & 3 Nights)</p>
+          <p>touse code:RJ-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a
+            href="https://hi.wikipedia.org/wiki/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8"><button
+              class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/peris-tower.jpg" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Peris tourse</h2>
+          <hr />
+          <p>INR 2,25,000 per couple</p>
+          <p>(9 days & 10 Nights)</p>
+          <p>touse code:PS-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Peri%C8%99"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/amrutsar.webp" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Amrutsar tourse</h2>
+          <hr />
+          <p>INR 67,000 per couple</p>
+          <p>(4 days & 4 Nights)</p>
+          <p>touse code:AM-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Amritsar"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/tajmahal.jpg" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Agra tourse</h2>
+          <hr />
+          <p>INR 67,000 per couple</p>
+          <p>(4 days & 2 Nights)</p>
+          <p>touse code:TM-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Taj_Mahal"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/maldive.webp" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Maldive tourse</h2>
+          <hr />
+          <p>INR 1,98,000 per couple</p>
+          <p>11 days & 10 Nights)</p>
+          <p>touse code:ML-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Maldives"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/singapur.jpg" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>Singapore tourse</h2>
+          <hr />
+          <p>INR 2,67,000 per couple</p>
+          <p>12 days & 13 Nights)</p>
+          <p>touse code:SN-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/Singapore"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_container">
+          <img src="img/london_bridge.webp" alt="" class="img-cards" />
+        </div>
+        <div class="details">
+          <h2>London tourse</h2>
+          <hr />
+          <p>INR 2,67,000 per couple</p>
+          <p>(14 days & 13 Nights)</p>
+          <p>touse code:UK-01-2023/24</p>
+          <a href="inqury_page.html"><button class="btn btn-primary">Enquiry</button></a>
+          <a href="https://en.wikipedia.org/wiki/London"><button class="btn btn-danger">Details</button></a>
+          <a href="booking.html"><button class="btn btn-warning">Book online</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container-fluid">
+      <div class="pheraps">
+        <div class="about">
+          <h3>About us</h3>
+          <p>
+            At our Tour and Travel website, we are committed to providing you with the best travel experience possible. Our team of experienced travel experts is dedicated to making your journey seamless, comfortable, and enjoyable. So, whether you are planning a romantic getaway, family vacation, or solo adventure, we have got you covered.
+          </p>
+        </div>
+           <div class="links">
+            <h3>Usefull links</h3>
+            <a href="turse_n_travels.html">home</a><br>
+            <a href="tourse_page.html">tourse</a><br>
+            <a href="booking.html">Booking</a><br>
+            <a href="inqury_page.html">contact us</a>
+           </div>
+        <div class="contact">
+          <h3>Contact us</h3>
+          <p>
+            Call us: <br>
+            9054396057
+          </p>
+          <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100068935792940" target="_blank"><i class="fab fa-facebook-square"></i>
+              Facebook</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br />
+            <a href="https://www.instagram.com/kaushik_bhikadiya/"target="_blank"><i class="fab fa-twitter"></i>Twitter</a><br />
+            <a href="https://www.linkedin.com/feed/"target="_blank"><i class="fa-brands fa-linkedin-in"></i> Linked in</a>
+          </div>
+        </div>
+      </div>
+      <span>&copy;Copyright All Rights are reserved by
+        <a href="">Kaushik Bhikadiya</a> the founder of krishna tourse n
+        travels</span>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.6.0/jquery.json.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#navbar-toggle").click(function () {
+        var div = $("#navbar-div");
+
+        div.animate({ height: "toggle" }, "slow");
+      });
+
+      $.getJSON("data.json", function (data) {
+        data.forEach((result) => {
+          $(".h1-div").append(`
+                       <br>
+                        <h1>${result.h1}</h1>
+                        <p>${result.p}</p>
+                   `);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
